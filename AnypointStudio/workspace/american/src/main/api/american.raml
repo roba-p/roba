@@ -1,0 +1,33 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/49d04820-2f23-403f-85e7-41288e1ceba3/ # 
+title: American_API
+version: 3
+
+/filights:
+  get:
+    responses:
+      200:   
+    body:
+      application/json:
+        example: |
+          {
+          "code": "GQ574",
+          "price": 399,
+          "departureDate": "2016/12/20",
+          "origin": "ORD",
+          "destination": "SFO",
+          "emptySeats": 200,
+          "plane": {"type": "Boeing 747", "totalSeats": 400}
+          }
+  /{fromAirport}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"fromAirport": "LAX"}
+                
+                
+              
+                
